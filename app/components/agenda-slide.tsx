@@ -57,7 +57,6 @@ function AgendaRow({ item, index }: { item: AgendaItem; index: number }) {
           <div className="w-24 shrink-0 border-r border-[#242424]" />
           <div className="flex flex-1 flex-col justify-center px-8 py-5">
             <div className="flex items-center">
-              <span className="mr-4 text-[#666]">—</span>
               <span className="text-xl text-[#A0A0A0]">{child.label}</span>
             </div>
             {child.links && (
