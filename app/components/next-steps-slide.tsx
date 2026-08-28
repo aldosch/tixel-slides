@@ -15,7 +15,7 @@ const steps: Step[] = [
   },
   {
     title: "Enterprise trial",
-    detail: "A chance to put it in front of the people who would actually use it.",
+    detail: "Let admins and builders get a feel for the platform.",
     children: [
       {
         title: "Try it with something real",
@@ -86,7 +86,7 @@ export function NextStepsSlide({ slideNumber, totalSlides }: SlideProps) {
           ))}
         </div>
 
-        <div className="flex items-center gap-6 px-16 pt-10">
+        <div className="flex items-center gap-6 px-16 pt-[68px]">
           <TixelWordmark className="h-9 w-auto" />
           <span className="text-2xl font-light text-[#444]">×</span>
           <VercelWordmark className="h-6 w-auto text-white" />
