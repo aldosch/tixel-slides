@@ -2,9 +2,10 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AgendaSlide } from "./components/agenda-slide";
+import { IntroSlide } from "./components/intro-slide";
 import { WhatWeHeardSlide } from "./components/what-we-heard-slide";
 
-const slides = [AgendaSlide, WhatWeHeardSlide];
+const slides = [IntroSlide, AgendaSlide, WhatWeHeardSlide];
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);

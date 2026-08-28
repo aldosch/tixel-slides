@@ -46,7 +46,7 @@ function PainRow({ point, index }: { point: PainPoint; index: number }) {
 
 export function WhatWeHeardSlide() {
   return (
-    <Background slideNumber={2} totalSlides={3}>
+    <Background slideNumber={3} totalSlides={4}>
       <div className="flex h-full flex-col">
         <div className="py-10">
           <span className="rounded-full bg-white px-8 py-3 text-xl font-medium text-black">
