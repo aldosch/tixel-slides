@@ -85,13 +85,7 @@ function AgendaRow({ item, index }: { item: AgendaItem; index: number }) {
 export function AgendaSlide() {
   return (
     <Background slideNumber={2} totalSlides={4}>
-      <div className="flex h-full flex-col">
-        <div className="py-10">
-          <span className="rounded-full bg-white px-8 py-3 text-xl font-medium text-black">
-            Agenda
-          </span>
-        </div>
-
+      <div className="flex h-full flex-col justify-center">
         <div className="border-t border-[#242424]">
           {agendaItems.map((item, index) => (
             <AgendaRow key={item.label} item={item} index={index} />
