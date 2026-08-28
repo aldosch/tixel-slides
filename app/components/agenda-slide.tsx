@@ -26,9 +26,18 @@ const agendaItems: AgendaItem[] = [
         label: "How to create agents?",
         links: [
           { label: "Eve", url: "https://eve.dev" },
-          { label: "Connect", url: "https://vercel.com/docs/connect" },
-          { label: "Passport", url: "https://vercel.com/docs/passport" },
           { label: "AI Gateway", url: "https://vercel.com/docs/ai-gateway" },
+        ],
+      },
+      {
+        label: "Governance; auth, integrations, observability",
+        links: [
+          { label: "Passport", url: "https://vercel.com/docs/passport" },
+          { label: "Connect", url: "https://vercel.com/docs/connect" },
+          {
+            label: "Observability",
+            url: "https://vercel.com/docs/observability",
+          },
         ],
       },
     ],
