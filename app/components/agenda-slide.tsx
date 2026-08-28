@@ -17,7 +17,7 @@ type AgendaItem = {
 
 const agendaItems: AgendaItem[] = [
   { label: "Intros" },
-  { label: "Here's what we heard" },
+  { label: "What we heard" },
   {
     label: "Platform demo",
     children: [

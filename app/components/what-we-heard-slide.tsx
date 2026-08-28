@@ -9,7 +9,7 @@ const painPoints: PainPoint[] = [
   {
     title: "Shadow IT",
     detail:
-      "Non-engineers are deploying apps without IT oversight — AI adoption is outpacing governance.",
+      "Non-engineers are deploying apps without IT oversight. AI adoption is outpacing governance.",
   },
   {
     title: "Coolify / VPS has no guardrails",
@@ -24,7 +24,7 @@ const painPoints: PainPoint[] = [
   {
     title: "Need framework flexibility",
     detail:
-      "Team values Nuxt, Python, and Next.js — they don't want to be locked into one stack.",
+      "Team values Nuxt, Python, and Next.js. They don't want to be locked into one stack.",
   },
 ];
 
@@ -48,11 +48,7 @@ export function WhatWeHeardSlide() {
   return (
     <Background slideNumber={3} totalSlides={4}>
       <div className="flex h-full flex-col">
-        <div className="py-10">
-          <span className="rounded-full bg-white px-8 py-3 text-xl font-medium text-black">
-            Here&apos;s what we heard
-          </span>
-        </div>
+        <h1 className="py-10 text-6xl font-bold text-white">What we heard</h1>
 
         <div className="border-t border-[#242424]">
           {painPoints.map((point, index) => (
