@@ -60,7 +60,7 @@ function AgendaRow({ item, index }: { item: AgendaItem; index: number }) {
               <span className="text-xl text-[#A0A0A0]">{child.label}</span>
             </div>
             {child.links && (
-              <div className="mt-2 flex flex-wrap gap-x-6 gap-y-1 pl-8">
+              <div className="mt-2 flex flex-wrap gap-x-6 gap-y-1">
                 {child.links.map((link) => (
                   <a
                     key={link.url}
@@ -83,7 +83,7 @@ function AgendaRow({ item, index }: { item: AgendaItem; index: number }) {
 
 export function AgendaSlide() {
   return (
-    <Background slideNumber={2} totalSlides={4}>
+    <Background slideNumber={2} totalSlides={3}>
       <div className="flex h-full flex-col justify-center">
         <div className="border-t border-[#242424]">
           {agendaItems.map((item, index) => (

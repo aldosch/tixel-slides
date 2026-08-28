@@ -46,9 +46,11 @@ function PainRow({ point, index }: { point: PainPoint; index: number }) {
 
 export function WhatWeHeardSlide() {
   return (
-    <Background slideNumber={3} totalSlides={4}>
-      <div className="flex h-full flex-col">
-        <h1 className="py-10 text-6xl font-bold text-white">What we heard</h1>
+    <Background slideNumber={3} totalSlides={3}>
+      <div className="flex h-full flex-col justify-center">
+        <h1 className="px-16 pb-10 text-6xl font-bold text-white">
+          What we heard
+        </h1>
 
         <div className="border-t border-[#242424]">
           {painPoints.map((point, index) => (
