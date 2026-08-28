@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { TixelIcon, VercelTriangle } from "./logos";
 
 export type SlideProps = {
   slideNumber: number;
@@ -9,12 +10,14 @@ type BackgroundProps = {
   children: ReactNode;
   slideNumber?: number;
   totalSlides?: number;
+  hideFooterLogos?: boolean;
 };
 
 export function Background({
   children,
   slideNumber,
   totalSlides,
+  hideFooterLogos = false,
 }: BackgroundProps) {
   return (
     <div className="relative h-full w-full bg-black">
@@ -42,20 +45,16 @@ export function Background({
         {children}
       </div>
 
-      <div
-        className="absolute flex items-center gap-2 text-white"
-        style={{ bottom: "4%", left: "9%" }}
-      >
-        <svg
-          aria-label="Vercel logotype"
-          role="img"
-          viewBox="0 0 76 65"
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-4 fill-white"
+      {hideFooterLogos ? null : (
+        <div
+          className="absolute flex items-center gap-4 text-white"
+          style={{ bottom: "4%", left: "9%" }}
         >
-          <path d="M37.5274 0L75.0548 65H0L37.5274 0Z" />
-        </svg>
-      </div>
+          <TixelIcon className="h-5 w-auto" />
+          <span className="h-4 w-px bg-[#333]" />
+          <VercelTriangle className="h-4 w-auto" />
+        </div>
+      )}
 
       {slideNumber && totalSlides ? (
         <div

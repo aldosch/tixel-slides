@@ -1,4 +1,5 @@
 import { Background, type SlideProps } from "./background";
+import { TixelWordmark, VercelWordmark } from "./logos";
 
 type Step = {
   title: string;
@@ -46,9 +47,13 @@ function StepRow({ step, index }: { step: Step; index: number }) {
 
 export function NextStepsSlide({ slideNumber, totalSlides }: SlideProps) {
   return (
-    <Background slideNumber={slideNumber} totalSlides={totalSlides}>
+    <Background
+      slideNumber={slideNumber}
+      totalSlides={totalSlides}
+      hideFooterLogos
+    >
       <div className="flex h-full flex-col justify-center">
-        <h1 className="px-16 pb-10 text-6xl font-bold text-white">
+        <h1 className="px-16 pb-8 text-6xl font-bold text-white">
           Where to from here?
         </h1>
 
@@ -56,6 +61,12 @@ export function NextStepsSlide({ slideNumber, totalSlides }: SlideProps) {
           {steps.map((step, index) => (
             <StepRow key={step.title} step={step} index={index} />
           ))}
+        </div>
+
+        <div className="flex items-center gap-6 px-16 pt-10">
+          <TixelWordmark className="h-9 w-auto" />
+          <span className="text-2xl font-light text-[#444]">×</span>
+          <VercelWordmark className="h-6 w-auto text-white" />
         </div>
       </div>
     </Background>
