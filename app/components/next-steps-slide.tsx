@@ -11,7 +11,7 @@ const steps: Step[] = [
   {
     title: "Definition of success",
     detail:
-      "A follow-up session to work out what good looks like for Tixel, including the measures that aren't technical. If it stacks up from there, an Enterprise trial opens up the full set of controls.",
+      "A follow-up session to work out what good looks like for Tixel, including the measures that aren't technical. If it makes sense, we could then kick off a trial.",
   },
   {
     title: "Enterprise trial",
