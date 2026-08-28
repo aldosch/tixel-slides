@@ -1,5 +1,10 @@
 import type { ReactNode } from "react";
 
+export type SlideProps = {
+  slideNumber: number;
+  totalSlides: number;
+};
+
 type BackgroundProps = {
   children: ReactNode;
   slideNumber?: number;

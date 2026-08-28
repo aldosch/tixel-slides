@@ -1,4 +1,4 @@
-import { Background } from "./background";
+import { Background, type SlideProps } from "./background";
 
 type PainPoint = {
   title: string;
@@ -44,9 +44,9 @@ function PainRow({ point, index }: { point: PainPoint; index: number }) {
   );
 }
 
-export function WhatWeHeardSlide() {
+export function WhatWeHeardSlide({ slideNumber, totalSlides }: SlideProps) {
   return (
-    <Background slideNumber={3} totalSlides={3}>
+    <Background slideNumber={slideNumber} totalSlides={totalSlides}>
       <div className="flex h-full flex-col justify-center">
         <h1 className="px-16 pb-10 text-6xl font-bold text-white">
           What we heard

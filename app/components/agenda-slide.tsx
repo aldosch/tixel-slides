@@ -1,4 +1,4 @@
-import { Background } from "./background";
+import { Background, type SlideProps } from "./background";
 
 type AgendaLink = {
   label: string;
@@ -90,9 +90,9 @@ function AgendaRow({ item, index }: { item: AgendaItem; index: number }) {
   );
 }
 
-export function AgendaSlide() {
+export function AgendaSlide({ slideNumber, totalSlides }: SlideProps) {
   return (
-    <Background slideNumber={2} totalSlides={3}>
+    <Background slideNumber={slideNumber} totalSlides={totalSlides}>
       <div className="flex h-full flex-col justify-center">
         <div className="border-t border-[#242424]">
           {agendaItems.map((item, index) => (

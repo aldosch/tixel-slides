@@ -2,10 +2,24 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AgendaSlide } from "./components/agenda-slide";
+import {
+  AgentsSlide,
+  DeploySlide,
+  GovernanceSlide,
+} from "./components/demo-slides";
 import { IntroSlide } from "./components/intro-slide";
+import { NextStepsSlide } from "./components/next-steps-slide";
 import { WhatWeHeardSlide } from "./components/what-we-heard-slide";
 
-const slides = [IntroSlide, AgendaSlide, WhatWeHeardSlide];
+const slides = [
+  IntroSlide,
+  AgendaSlide,
+  WhatWeHeardSlide,
+  DeploySlide,
+  AgentsSlide,
+  GovernanceSlide,
+  NextStepsSlide,
+];
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -78,7 +92,10 @@ export default function Home() {
             className="absolute left-0 top-0 origin-top-left"
             style={{ width: "1800px", height: "1000px", transform: `scale(${scale})` }}
           >
-            <CurrentSlide />
+            <CurrentSlide
+              slideNumber={currentSlide + 1}
+              totalSlides={slides.length}
+            />
           </div>
         </div>
       </div>
