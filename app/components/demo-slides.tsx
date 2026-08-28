@@ -59,7 +59,7 @@ export function DeploySlide(props: SlideProps) {
     <DemoSlide
       {...props}
       eyebrow="PLATFORM DEMO"
-      title="How to deploy?"
+      title="How do we deploy?"
       points={[
         "Git push to production. No VPS to patch or babysit.",
         "Framework agnostic. Nuxt, Next.js, Python, and whatever comes next.",
@@ -82,7 +82,7 @@ export function AgentsSlide(props: SlideProps) {
     <DemoSlide
       {...props}
       eyebrow="PLATFORM DEMO"
-      title="How to create agents?"
+      title="How do we build agents?"
       points={[
         "Eve gives agents durable state, runtime loops, and human approval steps.",
         "Sandbox isolation so agent code runs somewhere safe.",

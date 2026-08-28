@@ -4,44 +4,67 @@ import { TixelWordmark, VercelWordmark } from "./logos";
 type Step = {
   title: string;
   detail: string;
+  children?: { title: string; detail: string }[];
 };
 
 const steps: Step[] = [
-  {
-    title: "Try it with something real",
-    detail:
-      "Move an existing internal tool across, or build the one that keeps getting pushed down the list.",
-  },
-  {
-    title: "Bring in the people who aren't engineers",
-    detail:
-      "Claude, v0, or whatever your team already reaches for. The interesting part is what they can ship safely.",
-  },
-  {
-    title: "Let IT take the wheel",
-    detail:
-      "Set up users, permissions, and integrations, and get a feel for what running this day to day looks like.",
-  },
   {
     title: "Compare notes",
     detail:
       "A follow-up session to work out what good looks like for Tixel, including the measures that aren't technical. If it stacks up from there, an Enterprise trial opens up the full set of controls.",
   },
+  {
+    title: "Enterprise trial",
+    detail: "A chance to put it in front of the people who would actually use it.",
+    children: [
+      {
+        title: "Try it with something real",
+        detail:
+          "Maybe we could move an existing internal tool across, or build the one that keeps getting pushed down the list.",
+      },
+      {
+        title: "Let folks who aren't engineers try",
+        detail:
+          "Use Claude, v0, or whatever your team prefers to build and experiment safely.",
+      },
+    ],
+  },
 ];
 
 function StepRow({ step, index }: { step: Step; index: number }) {
   return (
-    <div className="flex items-stretch border-b border-[#242424]">
-      <div className="flex w-24 items-center justify-center border-r border-[#242424] py-7">
-        <span className="font-mono text-2xl text-[#A0A0A0]">
-          {String(index + 1).padStart(2, "0")}
-        </span>
+    <>
+      <div className="flex items-stretch border-b border-[#242424]">
+        <div className="flex w-24 items-center justify-center border-r border-[#242424] py-7">
+          <span className="font-mono text-2xl text-[#A0A0A0]">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        </div>
+        <div className="flex flex-1 flex-col justify-center px-8 py-7">
+          <span className="text-2xl font-semibold text-white">
+            {step.title}
+          </span>
+          <span className="mt-2 text-lg text-[#A0A0A0]">{step.detail}</span>
+        </div>
       </div>
-      <div className="flex flex-1 flex-col justify-center px-8 py-7">
-        <span className="text-2xl font-semibold text-white">{step.title}</span>
-        <span className="mt-2 text-lg text-[#A0A0A0]">{step.detail}</span>
-      </div>
-    </div>
+
+      {step.children?.map((child) => (
+        <div
+          key={child.title}
+          className="flex items-stretch border-b border-[#242424]"
+        >
+          <div className="w-24 shrink-0 border-r border-[#242424]" />
+          <div className="flex flex-1 flex-col justify-center border-l-2 border-[#333] px-8 py-5">
+            <span className="text-xl font-medium text-white">
+              {child.title}
+            </span>
+            <span className="mt-1 text-base text-[#A0A0A0]">
+              {child.detail}
+            </span>
+          </div>
+        </div>
+      ))}
+    </>
   );
 }
 

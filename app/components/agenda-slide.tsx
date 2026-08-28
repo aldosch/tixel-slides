@@ -21,9 +21,9 @@ const agendaItems: AgendaItem[] = [
   {
     label: "Platform demo",
     children: [
-      { label: "How to deploy?" },
+      { label: "How do we deploy?" },
       {
-        label: "How to create agents?",
+        label: "How do we build agents?",
         links: [
           { label: "Eve", url: "https://eve.dev" },
           { label: "AI Gateway", url: "https://vercel.com/docs/ai-gateway" },
